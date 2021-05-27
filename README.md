@@ -1,4 +1,6 @@
 # CDM-Frontend
-Home route is meant to display all patients on initialization and also search patients by name
+Home route is meant to display all patients on initialization 
 
-Reports route produces the monthly report
+Use is able to search patients by name
+
+Reports route has the monthly patient reports
