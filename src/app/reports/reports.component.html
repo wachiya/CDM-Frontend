@@ -14,7 +14,49 @@
           </div>
   
           <hr>
-  
+          <div class="panel panel-success">
+            <div class="panel-heading"> </div>
+      
+            <div class="panel-body">
+               <form name="patients">
+                <ul class="list-group list-group-flush">
+      
+                  <div class="col-sm-16">
+                    <div>
+      
+                      <table class="table">
+                        <thead class="thead-light">
+                          <tr>
+
+                            <th scope="col">Month</th>
+                            <th scope="col">Location</th>
+                            <th scope="col">New Hypertensive</th>
+                            <th scope="col">Known Hypertensive</th>
+                            <th scope="col">New Diabetic</th>
+                            <th scope="col">Known Diabetic</th>
+                            <th scope="col">Hypertensive and Diabetic</th>
+                          
+                            </tr>
+                        </thead>
+                        <tbody *ngFor='let report of output'>
+                          <tr class="reports">
+                            <th scope="row"> {{report.month}} </th>
+                            <td> {{report.location_id}} </td>
+                            <td> {{report.nh}} </td>
+                            <td> {{report.kh}} </td>
+                            <td> {{report.nb}} </td>
+                            <td> {{report.kb}} </td>
+                            <td> {{report.kb}} </td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </div>
+                  </div>
+      
+                </ul>
+              </form>
+            </div>
+          </div>
         </div>
       </div>
     </div>

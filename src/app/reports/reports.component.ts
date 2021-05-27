@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { RouterLinkWithHref } from '@angular/router';
+import { ReportsService } from '../reports.service';
 
 @Component({
   selector: 'app-reports',
@@ -7,9 +9,18 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ReportsComponent implements OnInit {
 
-  constructor() { }
+  output: any;
+  reports: any;
 
-  ngOnInit(): void {
+  constructor(private reportsService: ReportsService) { }
+
+  ngOnInit() {
+    this.getMonthlyReport()
   }
+
+  getMonthlyReport() {
+    this.reportsService.getMonthlyReport()
+      .subscribe((data) => this.output = data.report);
+      }
 
 }

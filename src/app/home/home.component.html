@@ -9,16 +9,62 @@
         <div class="col-12">
           <div class="bg-info">
             <h2 class="bg.dark text-center">Patient Catalogue</h2>
-            
-            <form class="form-inline my-2 my-lg-0">
-              <input type="text" class="form-control mr-sm-2"
+                
+              <input [(ngModel)] = "searchTerm"  type="text" class="form-control mr-sm-2"
                 placeholder="Search By Name" aria-label="Search">
-              <button class="btn btn-primary my-2 my-sm-0" type="submit">Search</button>
-            </form>
+              <button (click)="searchPatients()" class="btn btn-primary my-2 my-sm-0" >Search</button>
+              <button *ngIf="searchTerm" (click)="getAllPatients()" class="btn btn-primary my-2 my-sm-0" >Clear</button>
+              
           </div>
   
           <hr>
   
+
+          <div class="panel panel-success">
+            <div class="panel-heading"> </div>
+      
+            <div class="panel-body">
+               <form name="patients">
+                <ul class="list-group list-group-flush">
+      
+                  <div class="col-sm-16">
+                    <div>
+      
+                      <table class="table">
+                        <thead class="thead-light">
+                          <tr>
+
+                            <th scope="col">Patient Name</th>
+                            <th scope="col">Gender</th>
+                            <th scope="col">DoB</th>
+                            <th scope="col">Age</th>
+                            <th scope="col">Contact Details</th>
+                            <th scope="col">Hypertension Status</th>
+                            <th scope="col">Diabetic Status</th>
+                          
+                            </tr>
+                        </thead>
+                        <tbody *ngFor='let patient of output'>
+                          <tr class="patients">
+                            <th scope="row"> {{patient.name}} </th>
+                            <td> {{patient.gender}} </td>
+                            <td> {{patient.dob}} </td>
+                            <td> {{patient.dob}} </td>
+                            <td> {{patient.phone_number}} </td>
+                            <td> {{patient.htn_status}} </td>
+                            <td> {{patient.dm_status}} </td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </div>
+                  </div>
+      
+                </ul>
+              </form>
+            </div>
+          </div>
+
+
         </div>
       </div>
     </div>
