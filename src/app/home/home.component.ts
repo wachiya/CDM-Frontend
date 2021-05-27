@@ -19,8 +19,8 @@ export class HomeComponent implements OnInit {
     this.getAllPatients()
   }
 
+  //The subscriber function defines how to obtain or generate values or messages to be published.
   getAllPatients() {
-   // this.searchTerm=null;
     this.patientsService.getAllPatients()
       .subscribe((data) => this.output = data.patients);
   }

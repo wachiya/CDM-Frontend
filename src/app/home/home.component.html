@@ -39,12 +39,13 @@
                             <th scope="col">Contact Details</th>
                             <th scope="col">Hypertension Status</th>
                             <th scope="col">Diabetic Status</th>
-                          
+                           
                             </tr>
                         </thead>
                         <tbody *ngFor='let patient of output'>
                           <tr class="patients">
-                            <th scope="row"> {{patient.name}} </th>
+                            <th scope="row"> {{patient.name}} </th>  <!--This is it to retrieve properties of the data rquired 
+                                                                  from the objects retrieved from the database-->
                             <td> {{patient.gender}} </td>
                             <td> {{patient.dob}} </td>
                             <td> {{patient.phone_number}} </td>
