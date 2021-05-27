@@ -26,7 +26,8 @@ export class ReportsService {
         catchError(this.handleError<any>(`getMonthlyReport`))
       );
  }
- //create an error handler
+
+ //create a error handler
  public handleError<T>(operation = 'operation', result?: T) { 
   return (error: any): Observable<T> => {
     console.log(`${operation} failed: ${error.message}`);
