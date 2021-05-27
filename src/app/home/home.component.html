@@ -36,6 +36,7 @@
                             <th scope="col">Patient Name</th>
                             <th scope="col">Gender</th>
                             <th scope="col">DoB</th>
+                            <th scope="col">Age</th>
                             <th scope="col">Contact Details</th>
                             <th scope="col">Hypertension Status</th>
                             <th scope="col">Diabetic Status</th>
@@ -47,7 +48,8 @@
                             <th scope="row"> {{patient.name}} </th>  <!--This is it to retrieve properties of the data rquired 
                                                                   from the objects retrieved from the database-->
                             <td> {{patient.gender}} </td>
-                            <td> {{patient.dob}} </td>
+                            <td> {{patient.dob | date:'yyyy-MM-dd'}} </td>
+                            <td> {{patient.dob | age }} </td>
                             <td> {{patient.phone_number}} </td>
                             <td> {{patient.htn_status}} </td>
                             <td> {{patient.dm_status}} </td>

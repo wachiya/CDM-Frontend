@@ -1,7 +1,9 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-import { FormsModule } from '@angular/forms';
+import { FormsModule} from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
+import { DatePipe } from '@angular/common';
+import { AgePipe } from './age.pipe';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -11,11 +13,14 @@ import { PatientsService } from './patients.service';
 import { FormatWidth } from '@angular/common';
 
 
+
 @NgModule({
   declarations: [
+    AgePipe,
     AppComponent,
     HomeComponent,
-    ReportsComponent
+    ReportsComponent,
+    
   ],
   imports: [
     BrowserModule,
@@ -23,7 +28,7 @@ import { FormatWidth } from '@angular/common';
     HttpClientModule,
     AppRoutingModule
   ],
-  providers: [PatientsService],
+  providers: [PatientsService, DatePipe],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
