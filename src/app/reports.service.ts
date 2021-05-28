@@ -11,7 +11,7 @@ import { catchError, tap } from 'rxjs/operators';
 //services help us fetch or save data directly without involving the components
 export class ReportsService {
   //url = 'http://localhost:3000/api/v1';
-  url ='https://cdm-backend-rbtq6vf7t-wachiya.vercel.app/api/v1/';
+  url ='https://cdm-backend-rbtq6vf7t-wachiya.vercel.app/api/v1';
   reports: any;
 
   constructor(private http: HttpClient) { 

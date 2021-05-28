@@ -10,7 +10,7 @@ import { catchError, tap } from 'rxjs/operators';
 export class PatientsService {
 
   //url = 'http://localhost:3000/api/v1';
-  url ='https://cdm-backend-rbtq6vf7t-wachiya.vercel.app/api/v1/';
+  url ='https://cdm-backend-rbtq6vf7t-wachiya.vercel.app/api/v1';
   patients: any;
   name: any;
 
