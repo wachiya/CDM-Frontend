@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { RouterLinkWithHref } from '@angular/router';
 import { ReportsService } from '../reports.service';
+import { PatientsService } from '../patients.service';
 
 @Component({
   selector: 'app-reports',
@@ -22,5 +23,4 @@ export class ReportsComponent implements OnInit {
     this.reportsService.getMonthlyReport()
       .subscribe((data) => this.output = data.report);
       }
-
 }
